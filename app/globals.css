@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #BABBCA;
+  --foreground: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm-plex-mono);
+  --font-mono: var(--font-ibm-plex-mono);
+  --font-serif: var(--font-bayon);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-ibm-plex-mono);
+  overflow-x: hidden;
+}
+
+/* Headers with Bayon font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bayon);
+  font-weight: 400;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(19, 19, 19, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(19, 19, 19, 0.2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(19, 19, 19, 0.3);
+}
+
+/* Line animation for about section */
+.line {
+  overflow: hidden;
+}
+
+.line-content {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Draggable cursor feedback */
+.draggable-image {
+  touch-action: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.draggable-image:active {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth project animations */
+.project-item {
+  perspective: 1000px;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Mobile menu fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+[data-mobile-menu="open"] {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
