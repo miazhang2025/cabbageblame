@@ -3,7 +3,7 @@
 export default function Hero() {
   return (
     <section className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden pt-16">
-      {/* Video Background - Fallback gradient if video unavailable */}
+      {/* Fallback gradient background */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-black via-gray-900 to-black"></div>
       
       {/* Video Background */}
@@ -14,7 +14,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/hero-background.mp4" type="video/mp4" />
+        <source src="/background-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
