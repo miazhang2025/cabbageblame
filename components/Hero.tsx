@@ -3,6 +3,9 @@
 export default function Hero() {
   return (
     <section className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden pt-16">
+      {/* Video Background - Fallback gradient if video unavailable */}
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-black via-gray-900 to-black"></div>
+      
       {/* Video Background */}
       <video
         autoPlay
@@ -12,7 +15,6 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/hero-background.mp4" type="video/mp4" />
-        <source src="/hero-background.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
