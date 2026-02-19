@@ -160,16 +160,23 @@ export default function Projects() {
             >
               {/* Project Card with Background Image */}
               <div
-                className="relative h-96 p-6 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+                className="relative h-96 p-6 transition-all duration-300 overflow-hidden flex flex-col justify-between border border-white"
                 style={{
-                  backgroundImage: `url('${project.image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  border: '1px solid rgba(19, 19, 19, 0.15)',
+                  backgroundColor: 'transparent',
                 }}
               >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 group-hover:from-black/50 group-hover:to-black/70 transition-all duration-300"></div>
+                {/* Background Image Layer - Hidden by default, shows on hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: `url('${project.image}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+
+                {/* Dark overlay - stronger when no background, lighter on hover */}
+                <div className="absolute inset-0group-hover:bg-black/10 transition-all duration-300"></div>
 
                 {/* Content */}
                 <div className="relative z-10">
@@ -180,7 +187,7 @@ export default function Projects() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-4 leading-tight text-white group-hover:opacity-80 transition">
+                  <h3 className="text-xl font-bold mb-4 leading-tight" style={{ color: '#0000FF' }}>
                     {project.title}
                   </h3>
                 </div>
@@ -188,7 +195,7 @@ export default function Projects() {
                 {/* Bottom content */}
                 <div className="relative z-10 space-y-4">
                   {/* Description */}
-                  <p className="text-sm leading-relaxed text-white/90">
+                  <p className="text-sm leading-relaxed text-black/50 group-hover:text-white">
                     {project.description}
                   </p>
 
