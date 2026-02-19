@@ -15,6 +15,17 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex gap-6 items-center">
             <Link
+              href="https://github.com/miazhang2025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition text-sm tracking-wide px-1"
+              style={{ color: '#FFFFFF' }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}
+            >
+              GITHUB
+            </Link>
+            <Link
               href="https://www.instagram.com/cabbage_blame/"
               target="_blank"
               rel="noopener noreferrer"

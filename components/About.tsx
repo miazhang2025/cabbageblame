@@ -2,72 +2,43 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 import { Draggable } from 'gsap/dist/Draggable';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
-gsap.registerPlugin(ScrollTrigger, Draggable);
-
-// Split text hook for line animations
-function useSplitText() {
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!textRef.current) return;
-
-    const element = textRef.current;
-    const text = element.innerText;
-    const lines = text.split('\n').filter(line => line.trim());
-
-    // Clear the original text
-    element.innerHTML = '';
-
-    // Create wrapper for lines
-    const lineWrapper = document.createElement('div');
-    element.appendChild(lineWrapper);
-
-    // Create line elements
-    lines.forEach((line) => {
-      const lineEl = document.createElement('div');
-      lineEl.className = 'line overflow-hidden';
-      lineEl.style.height = '1.2em';
-
-      const lineContent = document.createElement('div');
-      lineContent.className = 'line-content';
-      lineContent.innerText = line;
-      lineContent.style.transform = 'translateY(100%)';
-
-      lineEl.appendChild(lineContent);
-      lineWrapper.appendChild(lineEl);
-    });
-
-    // Animate lines on scroll
-    const lineElements = element.querySelectorAll('.line-content');
-    lineElements.forEach((line) => {
-      gsap.to(line, {
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 100%',
-          end: 'top 50%',
-          scrub: 1,
-        },
-        y: 0,
-        duration: 1,
-      });
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-
-  return textRef;
-}
+gsap.registerPlugin(ScrambleTextPlugin, Draggable);
 
 export default function About() {
-  const aboutRef = useSplitText();
-  const experienceRef = useSplitText();
-  const skillsRef = useSplitText();
+  const sectionRef = useFadeInOnScroll({ duration: 0.8, delay: 0.2, staggerDelay: 0.1 });
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Setup text scramble animations on hover
+  useEffect(() => {
+    const setupScramble = (element: HTMLElement | null) => {
+      if (!element) return;
+
+      const originalText = element.innerText;
+
+      element.addEventListener('mouseenter', () => {
+        gsap.to(element, {
+          scrambleText: {
+            text: originalText,
+            speed: 0.8,
+            chars: '$^[]{} @#!.?:;',
+            revealDelay: 0.1,
+          },
+          duration: 0.5,
+        });
+      });
+    };
+
+    setupScramble(aboutRef.current);
+    setupScramble(experienceRef.current);
+    setupScramble(skillsRef.current);
+  }, []);
 
   // Setup draggable images
   useEffect(() => {
@@ -85,58 +56,58 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="relative w-full min-h-screen py-24 px-6" style={{ backgroundColor: '#BABBCA' }}>
+    <section ref={sectionRef} id="about" className="relative w-full min-h-screen py-24 px-6" style={{ backgroundColor: '#BABBCA' }}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold mb-16 tracking-wide" style={{ color: '#FFFFFF' }}>ABOUT</h2>
+        <h2 className="text-5xl md:text-6xl font-bold mb-16 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>I AM A</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Side - Text Sections with Animations */}
+          {/* Left Side - Text Sections with Scramble Animations */}
           <div className="space-y-12">
             {/* About */}
-            <div>
-              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>ABOUT</h3>
+            <div data-fade-in>
               <div
                 ref={aboutRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap"
+                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap cursor-pointer hover:opacity-80 transition-opacity"
                 style={{ color: '#FFFFFF' }}
               >
-                {`I am Mia Zhang, a Technical Artist specialized in VFX and Cinematics for the next generation of digital media.
-
-Under the moniker Cabbage Blame, I synthesize technical architecture with artistic direction. My mission is to elevate real-time media into a sophisticated cinematic language, ensuring that every frame is as technically optimized as it is visually breathtaking.
-
-With a degree in Entertainment Technology, my work bridges the gap between artistic vision and technical execution—whether through real-time VFX, procedural workflows, and real-time optimization.`}
+                {`Technical Artist & Creative Engineer, focused on immersive experiences and virtual production. I build tools, pipelines, and real-time systems — procedural generation, AI workflows, VFX, shading, XR/LED/projection installs. 
+                The short version: I write code to solve art problems. The longer version involves a lot of game engines, late nights, and questions like "what if we just tried—" 
+                I work across different tools and media intentionally. The most interesting creative problems tend to live at the edges of disciplines, and I like being useful at those edges.
+                I also make stuff purely for fun — moving images, small web experiments, creative coding projects that don't need to exist but do anyway. That lives at Cabbage Farm.`}
               </div>
             </div>
 
             {/* Experience */}
-            <div>
-              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>EXPERIENCE</h3>
+            <div data-fade-in>
+              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>I worked at</h3>
               <div
                 ref={experienceRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap"
+                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap cursor-pointer hover:opacity-80 transition-opacity"
                 style={{ color: '#FFFFFF' }}
               >
-                {`With a background in film production and cinematic storytelling, I bring visual and narrative sensibility to technical work.
-
-My on-set experience informs how I approach scene composition, emotional beats, and real-time rendering for live-action integration.
-
-I've worked on multiple AAA titles and independent projects, developing pipelines that balance artistic vision with technical performance.`}
+                {`Visual Endeavors - Creative Engineering — Live Entertainment & Virtual Production (Sphere, concerts, virtual production)
+COSM
+Technical Ops — Immersive Camera Systems
+Landor & Fitch, WPP
+Creative Development — Branding
+Poly Art
+Creative Direction — Architectural LED`}
               </div>
             </div>
 
             {/* Skills */}
-            <div>
-              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>SKILLS</h3>
+            <div data-fade-in>
+              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>I can do</h3>
               <div
                 ref={skillsRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap"
+                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap cursor-pointer hover:opacity-80 transition-opacity"
                 style={{ color: '#FFFFFF' }}
               >
-                {`Houdini, Unreal Engine, Unity, Maya, Blender, Substance Suite, and more.
-
-Specializing in VFX, procedural workflows, shader development, and building scalable pipelines for production.
-
-Real-time optimization, cinematics, animation, and virtual production technologies.`}
+                {`Real-Time: Unreal, Unity, TouchDesigner, Notch, Disguise
+3D & FX: Houdini, Blender, Maya, Cinema 4D, Substance, ZBrush
+Code: C++, C#, Python, VEX, HLSL/GLSL, JS/TS, React
+Post & Design: After Effects, Premiere, Photoshop, Figma
+Version Control: Git, Perforce`}
               </div>
             </div>
           </div>
@@ -145,11 +116,13 @@ Real-time optimization, cinematics, animation, and virtual production technologi
           <div
             ref={containerRef}
             className="relative h-96 lg:h-full min-h-96 overflow-hidden cursor-grab active:cursor-grabbing"
+            data-fade-in
           >
             {/* Draggable Image 1 */}
             <div
               className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
-              style={{ width: '120px', height: 'auto', left: '20px', top: '20px' }}
+              style={{ width: '150px', height: 'auto', left: '20px', top: '20px' }}
+              data-fade-in
             >
               <img 
                 src="/draggable%20images/img1.jpg" 
@@ -161,7 +134,8 @@ Real-time optimization, cinematics, animation, and virtual production technologi
             {/* Draggable Image 2 */}
             <div
               className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
-              style={{ width: '150px', height: 'auto', right: '20px', top: '60px' }}
+              style={{ width: '190px', height: 'auto', right: '20px', top: '60px' }}
+              data-fade-in
             >
               <img 
                 src="/draggable%20images/img2.jpg" 
@@ -173,7 +147,8 @@ Real-time optimization, cinematics, animation, and virtual production technologi
             {/* Draggable Image 3 */}
             <div
               className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
-              style={{ width: '130px', height: 'auto', left: '60px', bottom: '40px' }}
+              style={{ width: '160px', height: 'auto', left: '60px', bottom: '40px' }}
+              data-fade-in
             >
               <img 
                 src="/draggable%20images/img3.jpg" 
@@ -185,7 +160,8 @@ Real-time optimization, cinematics, animation, and virtual production technologi
             {/* Draggable Image 4 */}
             <div
               className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
-              style={{ width: '120px', height: 'auto', right: '40px', bottom: '60px' }}
+              style={{ width: '150px', height: 'auto', right: '40px', bottom: '60px' }}
+              data-fade-in
             >
               <img 
                 src="/draggable%20images/img4.jpg" 
@@ -197,11 +173,51 @@ Real-time optimization, cinematics, animation, and virtual production technologi
             {/* Draggable Image 5 */}
             <div
               className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
-              style={{ width: '140px', height: 'auto', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', zIndex: 50 }}
+              style={{ width: '175px', height: 'auto', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', zIndex: 50 }}
+              data-fade-in
             >
               <img 
                 src="/draggable%20images/img5.png" 
                 alt="Creative" 
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* Draggable Image 6 */}
+            <div
+              className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
+              style={{ width: '140px', height: 'auto', right: '60px', top: '150px' }}
+              data-fade-in
+            >
+              <img 
+                src="/draggable%20images/img6.jpg" 
+                alt="Portfolio" 
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* Draggable Image 7 */}
+            <div
+              className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
+              style={{ width: '160px', height: 'auto', left: '30%', bottom: '80px' }}
+              data-fade-in
+            >
+              <img 
+                src="/draggable%20images/img7.png" 
+                alt="Projects" 
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* Draggable Image 8 */}
+            <div
+              className="draggable-image absolute cursor-grab active:cursor-grabbing overflow-hidden"
+              style={{ width: '170px', height: 'auto', right: '30%', top: '20px' }}
+              data-fade-in
+            >
+              <img 
+                src="/draggable%20images/img8.jpg" 
+                alt="Work" 
                 className="w-full h-auto"
               />
             </div>
