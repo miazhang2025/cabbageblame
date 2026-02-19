@@ -233,6 +233,13 @@ export default function Projects() {
             <p className="text-lg" style={{ color: '#FFFFFF' }}>No projects found in this category.</p>
           </div>
         )}
+
+        {/* Tagline Section */}
+        <div className="mt-24 text-center py-12">
+          <p className="text-2xl md:text-3xl font-light tracking-wide" style={{ color: '#FFFFFF' }}>
+            baggage claim? cabbage blame.
+          </p>
+        </div>
       </div>
     </section>
   );
