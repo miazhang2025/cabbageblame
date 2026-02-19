@@ -176,7 +176,7 @@ export default function Projects() {
                 ></div>
 
                 {/* Dark overlay - stronger when no background, lighter on hover */}
-                <div className="absolute inset-0group-hover:bg-black/10 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-all duration-300"></div>
 
                 {/* Content */}
                 <div className="relative z-10">
