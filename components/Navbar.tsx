@@ -19,13 +19,13 @@ export default function Navbar() {
       <div className="fixed right-6 top-0 h-16 z-50">
         <div className="flex items-center h-16">
           <div className="hidden md:flex gap-8 items-center">
-            <Link href="#projects" className="transition text-sm tracking-wide px-1" style={{ color: '#ffffff' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff'; }}>
+            <Link href="/#projects" className="transition text-sm tracking-wide px-1" style={{ color: '#ffffff' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff'; }}>
               {'>'}  WORKS
             </Link>
-            <Link href="#about" className="transition text-sm tracking-wide px-1" style={{ color: '#ffffff' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff'; }}>
+            <Link href="/#about" className="transition text-sm tracking-wide px-1" style={{ color: '#ffffff' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff'; }}>
               {'>'}  ABOUT
             </Link>
-            <Link href="#projects" className="transition text-sm tracking-wide px-1" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff'; }}>
+            <Link href="/cabbage-farm" className="transition text-sm tracking-wide px-1" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff'; }}>
               {'>'}  CABBAGE FARM
             </Link>
 
@@ -49,13 +49,13 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="fixed top-16 right-0 px-6 py-4 space-y-3 text-right transition-opacity duration-300 opacity-100" data-mobile-menu="open">
-          <Link href="#projects" className="block text-sm tracking-wide px-1 transition" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}>
+          <Link href="/#projects" className="block text-sm tracking-wide px-1 transition" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}>
             WORKS
           </Link>
-          <Link href="#about" className="block text-sm tracking-wide px-1 transition" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}>
+          <Link href="/#about" className="block text-sm tracking-wide px-1 transition" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}>
             ABOUT
           </Link>
-          <Link href="#projects" className="block text-sm tracking-wide px-1 transition" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}>
+          <Link href="/cabbage-farm" className="block text-sm tracking-wide px-1 transition" style={{ color: '#FFFFFF' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#0000FF'; e.currentTarget.style.color = '#FFFFFF'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#FFFFFF'; }}>
             CABBAGE FARM
           </Link>
         </div>

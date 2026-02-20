@@ -32,7 +32,8 @@
     "title": "Nightingale",
     "category": "Immersive & Real-Time Systems",
     "tags": ["TouchDesigner", "Live Entertainment", "Concert Visuals", "Real-Time"],
-    "intro": "Concert visuals for No Doubt."
+    "intro": "Concert visuals for No Doubt.",
+    "url": "https://www.nodoubt.com/sphere/"
   },
   {
     "id": "zach-become-human",
@@ -46,7 +47,8 @@
     "title": "Toledo Park Quest",
     "category": "Games & Interactive",
     "tags": ["Unity", "Game Design", "Education", "Community"],
-    "intro": "Educational game built for local youth in partnership with the City of Toledo."
+    "intro": "Educational game built for local youth in partnership with the City of Toledo.",
+    "url":"https://store.steampowered.com/app/4086070/Toledo_Park_Quest/"
   },
   {
     "id": "volunteer-peeping-contract",
@@ -95,28 +97,32 @@
     "title": "Codesmith / Federal",
     "category": "Web & Brand",
     "tags": ["Figma", "React", "TypeScript", "Brand Design", "Frontend"],
-    "intro": "Brand identity and landing page for a $100M+ federal education initiative."
+    "intro": "Brand identity and landing page for a $100M+ federal education initiative.",
+    "url": "https://www.codesmith.io/federal"
   },
   {
     "id": "mia-au-chocolat",
     "title": "MIA au Chocolat",
     "category": "Web & Brand",
     "tags": ["Three.js", "WebGL", "Creative Coding", "Frontend"],
-    "intro": "3D web experience for my fictional virtual bakery. Delicious and unnecessary."
+    "intro": "3D web experience for my fictional virtual bakery. Delicious and unnecessary.",
+    "url": "https://mia-au-chocolat.digital/"
   },
   {
     "id": "jessy-vodka",
     "title": "Jessy Vodka",
     "category": "Web & Brand",
     "tags": ["HTML/CSS", "Creative Coding", "Frontend"],
-    "intro": "A website for a vodka brand that doesn't exist. Stupid and great."
+    "intro": "A website for a vodka brand that doesn't exist. Stupid and great.",
+    "url": "https://jessy.wtf/"
   },
   {
     "id": "clementine",
     "title": "Clementine",
     "category": "Web & Brand",
     "tags": ["Python", "AI", "LLM", "Personal Project"],
-    "intro": "My personal AI assistant. She lives here now."
+    "intro": "My personal AI assistant. She lives here now.",
+    "url": "https://mia-clementine.vercel.app/"
   },
   {
     "id": "the-dive",
@@ -137,48 +143,55 @@
     "title": "By the Ruins",
     "category": "Moving Image & Film",
     "tags": ["Documentary", "Film", "Directing"],
-    "intro": "Documentary about outsider artists in 00s Beijing."
+    "intro": "Documentary about outsider artists in 00s Beijing.",
+    "url": "https://vimeo.com/682321193?fl=pl&fe=sh"
   },
   {
     "id": "all-that-is-solid-melts-into-air",
     "title": "All That Is Solid Melts Into Air",
     "category": "Moving Image & Film",
     "tags": ["Video Essay", "Motion Graphics", "Concept-Driven"],
-    "intro": "A sarcastic video response to Chinese government lockdown regulations. Named after Marx. Obviously."
+    "intro": "A sarcastic video response to Chinese government lockdown regulations. Named after Marx. Obviously.",
+    "url": "https://vimeo.com/770053303?fl=pl&fe=ti"
   },
   {
     "id": "my-life-is-a-pathetic-mumblecore-film",
     "title": "My Life Is A Pathetic Mumblecore Film",
     "category": "Moving Image & Film",
     "tags": ["Film", "Self-Portrait", "Video"],
-    "intro": "Self-portrait video. The title says everything."
+    "intro": "Self-portrait video. The title says everything.",
+    "url":"https://vimeo.com/897940559?fl=pl&fe=ti"
   },
   {
     "id": "j-of-theseus",
     "title": "J of Theseus",
     "category": "Moving Image & Film",
     "tags": ["Film", "Narrative", "Sci-Fi"],
-    "intro": "A humanoid searches for the perfect organs to become real. Currently looking for a heart."
+    "intro": "A humanoid searches for the perfect organs to become real. Currently looking for a heart.",
+    "url": "https://vimeo.com/777905236?fl=pl&fe=ti"
   },
   {
     "id": "silent-night",
     "title": "Silent Night",
     "category": "Moving Image & Film",
     "tags": ["Stop Motion", "Animation", "Film"],
-    "intro": "Stop-motion animation about a quiet moment in WWI, recreated with chess pieces."
+    "intro": "Stop-motion animation about a quiet moment in WWI, recreated with chess pieces.",
+    "url": "https://vimeo.com/642034433?fl=pl&fe=ti"
   },
   {
     "id": "monday-morning",
     "title": "Monday Morning",
     "category": "Moving Image & Film",
     "tags": ["Collage", "Animation", "Motion"],
-    "intro": "Collage animation. Exactly what it sounds like."
+    "intro": "Collage animation. Exactly what it sounds like.",
+    "url": "https://vimeo.com/656677870?fl=pl&fe=ti"
   },
   {
     "id": "twin-peaks-intro",
     "title": "Twin Peaks Intro",
     "category": "Moving Image & Film",
     "tags": ["Animation", "Motion Design", "Fan Work"],
-    "intro": "Tarot card animation reimagining the Twin Peaks intro sequence."
+    "intro": "Tarot card animation reimagining the Twin Peaks intro sequence.",
+    "url": "https://vimeo.com/642034606?fl=pl&fe=ti"
   }
 ]

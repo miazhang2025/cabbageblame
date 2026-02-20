@@ -1,0 +1,37 @@
+[
+  {
+    "id": "gong-xi-fa-cai",
+    "title": "恭喜发财 (Gong Xi Fa Cai)",
+    "tags": ["AI Video", "AIGC", "Music Video"],
+    "intro": "My own AI-generated spin on Andy Lau's classic Gong Xi Fa Cai. A Chinese New Year gift to myself and anyone who needs it.",
+    "status": "done"
+  },
+  {
+    "id": "jessy-vodka",
+    "title": "Jessy Vodka",
+    "tags": ["Web", "Creative Coding", "Frontend"],
+    "intro": "A website for my friend Jessy who loves to drink — so people can buy her a drink virtually. Completely pointless. Absolutely necessary.",
+    "status": "done"
+  },
+  {
+    "id": "mia-au-chocolat",
+    "title": "MIA au Chocolat",
+    "tags": ["Three.js", "WebGL", "3D Web", "Creative Coding"],
+    "intro": "A 3D virtual bakery that exists only on the internet. Mine. Do not steal my croissants.",
+    "status": "wip"
+  },
+  {
+    "id": "santa-beer",
+    "title": "Santa Beer",
+    "tags": ["AI Video", "AIGC", "Advertisement"],
+    "intro": "An AI-generated ad for an imaginary beer brand beloved by Santa Claus. The brief wrote itself.",
+    "status": "wip"
+  },
+  {
+    "id": "cassette-jury",
+    "title": "Cassette Jury",
+    "tags": ["Web App", "AI", "Creative Tool", "React"],
+    "intro": "A tongue-in-cheek AI-powered app to help you and your creative partner make decisions — for when there's no time, no budget, and no patience for user testing.",
+    "status": "wip"
+  }
+]

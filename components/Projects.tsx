@@ -14,6 +14,7 @@ interface Project {
   category: string;
   tags: string[];
   intro: string;
+  url?: string;
 }
 
 const categories = [
@@ -69,7 +70,7 @@ export default function Projects() {
   return (
     <section ref={sectionRef} id="projects" className="relative w-full py-24" style={{ backgroundColor: '#BABBCA' }}>
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-bold mb-12 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>SELECTED PROJECTS</h2>
+        <h2 className="text-5xl md:text-6xl font-bold mb-12 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>MY PROJECTS</h2>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-12" data-fade-in>
@@ -105,8 +106,12 @@ export default function Projects() {
           ref={containerRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredProjects.map((project, index) => (
-            <Link key={project.id} href={`/projects/${project.id}`}>
+          {filteredProjects.map((project, index) => {
+            const projectLink = project.url || `/projects/${project.id}`;
+            const isExternal = !!project.url;
+            
+            return (
+            <Link key={project.id} href={projectLink} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
               <div
                 data-flip
                 data-fade-in
@@ -177,7 +182,8 @@ export default function Projects() {
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
 
         {/* No results message */}

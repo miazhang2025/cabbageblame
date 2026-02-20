@@ -50,7 +50,7 @@ export default function Hero() {
       </div>
 
       {/* Background gradient */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b pointer-events-none" style={{ background: 'linear-gradient(to bottom, rgba(19, 19, 19, 0.1), transparent)' }} /> */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(168, 187, 202, 0.5), transparent)' }} /> */}
     </section>
   );
 }

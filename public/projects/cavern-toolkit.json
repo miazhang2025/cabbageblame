@@ -1,0 +1,120 @@
+{
+  "id": "cavern-toolkit",
+  "title": "CAVERN Toolkit",
+  "category": "Immersive & Real-Time Systems",
+  "tags": ["Unity", "C#", "SDK Development", "Projection Mapping", "Immersive"],
+  "intro": "A Unity SDK for 270° immersive projection environments. Built to make the weird spatial stuff easier to build on top of.",
+  "heroImage": "/projects/cavern-toolkit/hero.jpg",
+  "platform": "A Unity Development Toolkit with an interactive sample scene.",
+  "toolsAndTech": ["Maya", "Blender", "ZBrush", "Substance Painter", "Substance Designer", "Unity"],
+  "roles": ["Tech Artist", "VFX Artist", "3D Artist", "UI Artist"],
+  "links": {
+    "github": "https://github.com/spelunx/UnityCavernSDK",
+    "devblog": "https://projects.etc.cmu.edu/spelunx/",
+    "doc": "https://docs.google.com/document/d/1oikXVXg3SJcOXE_zSy_NDTdPni1OEw-hWnP-Rl9VcSY/edit?usp=sharing"
+  },
+  "contributions": [
+    {
+      "title": "Designed and created the sample scene assets and experience",
+      "image": "/projects/cavern-toolkit/contribution-1.jpg"
+    },
+    {
+      "title": "Creating shaders and VFX (stylized grass, water) for sample scenes",
+      "image": "/projects/cavern-toolkit/contribution-2.jpg"
+    },
+    {
+      "title": "Animated Fur Shader (HLSL)",
+      "image": "/projects/cavern-toolkit/contribution-3.jpg"
+    },
+    {
+      "title": "Stylized Water Shader (Shader Graph)",
+      "image": "/projects/cavern-toolkit/contribution-4.jpg"
+    },
+    {
+      "title": "Wind Simulation (Shader Graph)",
+      "image": "/projects/cavern-toolkit/contribution-5.jpg"
+    },
+    {
+      "title": "Hugging VFX (Particle System & VFXGraph, two way)",
+      "image": "/projects/cavern-toolkit/contribution-6.jpg"
+    },
+    {
+      "title": "Sparkle VFX (Particle System & VFXGraph, two way)",
+      "image": "/projects/cavern-toolkit/contribution-7.jpg"
+    },
+    {
+      "title": "Created detailed documentation for artist and developers best practices in CAVERN",
+      "image": "/projects/cavern-toolkit/contribution-8.jpg"
+    },
+    {
+      "title": "Developed UI for Unity editor windows, improving accessibility of toolkit features",
+      "image": "/projects/cavern-toolkit/contribution-9.jpg"
+    }
+  ],
+  "overview": "The CAVERN Toolkit is a collection of software tools, Unity packages, and supporting documents that enables students to create immersive XR experiences even with little to no prior XR background. The CAVERN is a low-cost multiplayer CAVE with a 270° curved screen, 3D stereoscopic projection and a 20-foot diameter play area located at Carnegie Mellon University. These unique qualities of the CAVERN allow for multiple guests to physically explore an XR world together.",
+  "overviewVideo": "https://www.youtube.com/embed/IQDDJpuSlSs",
+  "aboutCAVERN": {
+    "title": "About CAVERN",
+    "description": "CAVERN is a 270-degree projection-based stereoscopic platform with a 20-foot wide play area. It supports surround audio and is created with the intention of hosting multiplayer. Various input devices can be connected, and our toolkit is currently supporting motion tracking using Vive Trackers. The toolkit includes a new rendering solution that supports head-tracked stereoscopic rendering in all directions. A system was made to abstract away the previously tedious process for incorporating motion-tracking devices for interaction input and configuring spatial audio for immersive sound design. To increase accessibility for students and beginner developers, a simplified interface was implemented within the Unity 6 editor, enabling setup with a single click. Additionally, several sample projects were created to serve as inspirations and jumping off points. All of the above are bundled into modular packages hosted in the Unity Package Manager (UPM) and accompanied by extensive documentation and tutorials."
+  },
+  "sampleScene": {
+    "title": "Sample Scene",
+    "description": "Within the toolkit, we designed and built a beautiful botanical garden sample scene including basic setup to art assets, as well as basic interaction scripts, and a demo interaction system that can demonstrate the new features. We want to make sure all the visual and audio assets and the interaction scripts are there for you to use and build upon. The sample scene demonstrate an immersive experience of a little creature to find its mum in a dreamy surreal garden with giant flowers.",
+    "goals": [
+          {
+            "title": "Arouse Sense of Immersion",
+            "image": "/projects/cavern-toolkit/goal-1.jpg"
+          },
+          {
+            "title": "Stereo & Spatial Sound",
+            "image": "/projects/cavern-toolkit/goal-2.jpg"
+          },
+          {
+            "title": "Animated objects",
+            "image": "/projects/cavern-toolkit/goal-3.jpg"
+          },
+          {
+            "title": "Demo Interactions & Showcase vive trackers features",
+            "image": "/projects/cavern-toolkit/goal-4.jpg"
+          },
+          {
+            "title": "Prefabs with interaction scripts",
+            "image": "/projects/cavern-toolkit/goal-5.jpg"
+          },
+          {
+            "title": "Prove Performance & Tech art features",
+            "image": "/projects/cavern-toolkit/goal-6.jpg"
+          }
+    ]
+  },
+  "techArts": [
+    {
+      "title": "Stylized & Running Water",
+      "image": "/projects/cavern-toolkit/tech-water.jpg"
+    },
+    {
+      "title": "Wind Simulation",
+      "image": "/projects/cavern-toolkit/tech-wind.jpg"
+    },
+    {
+      "title": "Fur Shader & Subsurface Scattering",
+      "image": "/projects/cavern-toolkit/tech-fur.jpg"
+    },
+    {
+      "title": "VFX & Particle System",
+      "image": "/projects/cavern-toolkit/tech-vfx.jpg"
+    },
+    {
+      "title": "Fur Shader - HLSL",
+      "image": "/projects/cavern-toolkit/tech-hlsl.jpg"
+    },
+    {
+      "title": "Stylized Water - Shader Graph",
+      "image": "/projects/cavern-toolkit/tech-shader-graph.jpg"
+    },
+    {
+      "title": "Wind - Shader Graph",
+      "image": "/projects/cavern-toolkit/tech-wind-graph.jpg"
+    }
+  ]
+}

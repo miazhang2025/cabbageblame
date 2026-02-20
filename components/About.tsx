@@ -58,7 +58,7 @@ export default function About() {
   return (
     <section ref={sectionRef} id="about" className="relative w-full min-h-screen py-24 px-6" style={{ backgroundColor: '#BABBCA' }}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold mb-16 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>I AM A</h2>
+        <h2 className="text-5xl md:text-7xl font-bold mb-2 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>I AM A</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Side - Text Sections with Scramble Animations */}
@@ -221,6 +221,7 @@ Version Control: Git, Perforce`}
                 className="w-full h-auto"
               />
             </div>
+            <p className='opacity-50 text-center'>drag me crazy :)</p>
           </div>
         </div>
       </div>

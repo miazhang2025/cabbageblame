@@ -1,0 +1,88 @@
+{
+  "id": "echocavern",
+  "title": "EchoCAVERN",
+  "category": "Immersive & Real-Time Systems",
+  "tags": ["Unity", "AI", "Voice Recognition", "Real-Time 3D", "Immersive", "R&D"],
+  "intro": "Personal R&D — an AI-driven voice-to-3D experience built for immersive projection space. Still evolving.",
+  "overview": "EchoCavern is a Demo of an immersive experience to integrate AI generated 3D assets into the Unity immersive experience development pipeline. It is a demo (and a tool) for exploration of potential real time 3D models to the CAVERN (Unity) development pipeline. Even though this tool only has a basic working demo of the asset generating and importing pipeline, it showcases the potential of integrating AI generation and CAVERN immersive experiences.",
+  "overviewVideo": "https://www.youtube.com/embed/placeholder",
+  "goal": {
+    "title": "Goal",
+    "description": "The objective of the independent study will look at the pipeline of importing AI generated 3D content into an active Unity Environment running on the Cavern Setup. While we already know that AI Generated models and meshes can be imported into Unity (and thus the Cavern Toolkit setup) this exploration looks at ways in which a user (or designer) can import AI generated content in close to real time as the unity environment is running."
+  },
+  "userFlow": {
+    "title": "User Flow",
+    "description": "The experience begins with the user speaking into a microphone. Their voice is captured, confirmed, and then processed through an AI speech-to-text system (Whisper), which accurately converts the spoken phrase into clean text. This ensures the system fully understands what the user described, whether it's an object, creature, or scene element.",
+    "steps": [
+      {
+        "title": "Voice Input & Transcription",
+        "description": "User speaks into the microphone. Voice is captured and processed through Whisper speech-to-text system"
+      },
+      {
+        "title": "AI 3D Generation",
+        "description": "Text is sent to the Meshy API, which generates a 3D model based on the user's description in real time"
+      },
+      {
+        "title": "Immersive Display",
+        "description": "Unity brings the generated model into the immersive environment instantly. The asset is imported, placed, and displayed on the large screen"
+      },
+      {
+        "title": "Continuous Loop",
+        "description": "The loop continues seamlessly, allowing users to keep speaking, creating, and shaping the space through voice alone"
+      }
+    ]
+  },
+  "thePlugin": {
+    "title": "The Plugin",
+    "description": "During exploration of the development of this experience, I also created a tool for testing and playing with the Meshy API in unity. (Meshy has its official plugin and this is an in-Unity-Editor version so that there is more control for the development process)",
+    "downloadLink": "https://github.com/miazhang2025/Meshy2CAVERN",
+    "howToUse": [
+      "Download the Package and Import",
+      "On the top of the Navigation bar, click Meshy to CAVERN",
+      "Type your API key",
+      "Type prompt and generate"
+    ]
+  },
+  "developmentIteration": {
+    "title": "Development & Iteration",
+    "steps": [
+      {
+        "title": "Step 1: GUI - Model Importer",
+        "items": [
+          "Manually download from Web app and automatically import into the scene",
+          "Basic functions: import, randomize and delete",
+          "Installed Meshy Plugin"
+        ],
+        "image": "/projects/echocavern/step-1.jpg"
+      },
+      {
+        "title": "Step 2: Meshy API",
+        "items": [
+          "Using the API key to download the model directly into Unity Folder and Scene",
+          "Analysed the differences for each assets pipeline",
+          "Adding Prompt input in GUI",
+          "Debug the threading control"
+        ],
+        "image": "/projects/echocavern/step-2.jpg"
+      },
+      {
+        "title": "Step 3: Realtime Generation",
+        "items": [
+          "Refine the GUI Importer",
+          "Adding download format and the task status",
+          "Refine the code structure",
+          "Implemented the in game UI system (WIP)"
+        ],
+        "image": "/projects/echocavern/step-3.jpg"
+      },
+      {
+        "title": "Step 4: Final Refinement",
+        "items": [
+          "Adding texture and material for the model",
+          "Finalize documentation"
+        ],
+        "image": "/projects/echocavern/step-4.jpg"
+      }
+    ]
+  }
+}
