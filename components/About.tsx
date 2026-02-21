@@ -27,7 +27,7 @@ export default function About() {
           scrambleText: {
             text: originalText,
             speed: 0.8,
-            chars: '$^[]{} @#!.?:;',
+            chars: '$s@#!?',
             revealDelay: 0.1,
           },
           duration: 0.5,
@@ -56,7 +56,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="relative w-full min-h-screen py-24 px-6" style={{ backgroundColor: '#BABBCA' }}>
+    <section ref={sectionRef} id="about" className="relative w-full min-h-screen py-24 px-6" style={{ backgroundColor: '#0000FF' }}>
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl md:text-7xl font-bold mb-2 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>I AM A</h2>
 
@@ -67,7 +67,7 @@ export default function About() {
             <div data-fade-in>
               <div
                 ref={aboutRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap cursor-pointer hover:opacity-80 transition-opacity"
+                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap"
                 style={{ color: '#FFFFFF' }}
               >
                 {`Technical Artist & Creative Engineer, focused on immersive experiences and virtual production. I build tools, pipelines, and real-time systems — procedural generation, AI workflows, VFX, shading, XR/LED/projection installs. 
@@ -79,10 +79,10 @@ export default function About() {
 
             {/* Experience */}
             <div data-fade-in>
-              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>I worked at</h3>
+              <h3 className="text-lg mb-2 tracking-wide" style={{ color: '#FFFFFF' }}>I worked at</h3>
               <div
                 ref={experienceRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap cursor-pointer hover:opacity-80 transition-opacity"
+                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap "
                 style={{ color: '#FFFFFF' }}
               >
                 {`Visual Endeavors - Creative Engineering — Live Entertainment & Virtual Production (Sphere, concerts, virtual production)
@@ -97,10 +97,10 @@ Creative Direction — Architectural LED`}
 
             {/* Skills */}
             <div data-fade-in>
-              <h3 className="text-lg mb-4 tracking-wide" style={{ color: '#FFFFFF' }}>I can do</h3>
+              <h3 className="text-lg mb-2 tracking-wide" style={{ color: '#FFFFFF' }}>I can do</h3>
               <div
                 ref={skillsRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap cursor-pointer hover:opacity-80 transition-opacity"
+                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap "
                 style={{ color: '#FFFFFF' }}
               >
                 {`Real-Time: Unreal, Unity, TouchDesigner, Notch, Disguise
