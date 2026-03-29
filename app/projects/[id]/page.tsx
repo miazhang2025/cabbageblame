@@ -69,6 +69,11 @@ interface DetailedProject extends Project {
     title: string;
     image?: string;
   }>;
+  otherHDAs?: Array<{
+    title: string;
+    image?: string;
+  }>;
+  galleryImages?: string[];
 }
 
 export async function generateStaticParams() {
@@ -196,6 +201,19 @@ export default async function ProjectDetail({
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl" style={{ color: '#FFFFFF' }}>
             {project.intro}
           </p>
+
+          {/* Hero Image */}
+          {project.heroImage && (
+            <div className="relative w-full mt-12" style={{ maxHeight: '500px', aspectRatio: '16/9', overflow: 'hidden' }}>
+              <Image
+                src={project.heroImage}
+                alt={project.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -340,10 +358,8 @@ export default async function ProjectDetail({
                         )}
                       </div>
                       {step.image && (
-                        <div className="w-64 h-48 flex-shrink-0">
-                          <div className="w-full h-full bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
-                            <p style={{ color: '#888' }} className="text-sm text-center px-4">[{step.title}]</p>
-                          </div>
+                        <div className="relative w-64 h-48 flex-shrink-0 rounded-lg overflow-hidden">
+                          <Image src={step.image} alt={step.title} fill className="object-cover" />
                         </div>
                       )}
                     </div>
@@ -364,10 +380,8 @@ export default async function ProjectDetail({
                       </p>
                     </div>
                     {contribution.image && (
-                      <div className="w-64 h-48 flex-shrink-0">
-                        <div className="w-full h-full bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
-                          <p style={{ color: '#888' }} className="text-sm text-center">[Image: {contribution.title}]</p>
-                        </div>
+                      <div className="relative w-64 h-48 flex-shrink-0 rounded-lg overflow-hidden">
+                        <Image src={contribution.image} alt={contribution.title} fill className="object-cover" />
                       </div>
                     )}
                   </div>
@@ -434,6 +448,39 @@ export default async function ProjectDetail({
                     <p style={{ color: '#CCCCCC' }} className="text-sm tracking-wide">
                       {asset.title}
                     </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Gallery Images */}
+          {project.galleryImages && project.galleryImages.length > 0 && (
+            <div className="mb-24">
+              <h2 className="text-4xl font-bold mb-8 tracking-wide" style={{ color: '#FFFFFF' }}>GALLERY</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {project.galleryImages.map((src, index) => (
+                  <div key={index} className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                    <Image src={src} alt={`Gallery image ${index + 1}`} fill className="object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Other HDAs */}
+          {project.otherHDAs && project.otherHDAs.length > 0 && (
+            <div className="mb-24">
+              <h2 className="text-4xl font-bold mb-8 tracking-wide" style={{ color: '#FFFFFF' }}>OTHER HOUDINI PCG HDA</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {project.otherHDAs.map((hda, index) => (
+                  <div key={index} className="flex flex-col items-center gap-4">
+                    <p className="text-sm tracking-widest font-bold" style={{ color: '#FFFFFF' }}>{hda.title}</p>
+                    {hda.image && (
+                      <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: '1/1' }}>
+                        <Image src={hda.image} alt={hda.title} fill className="object-cover" />
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>

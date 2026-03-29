@@ -4,7 +4,7 @@
   "category": "Immersive & Real-Time Systems",
   "tags": ["Unity", "C#", "SDK Development", "Projection Mapping", "Immersive"],
   "intro": "A Unity SDK for 270° immersive projection environments. Built to make the weird spatial stuff easier to build on top of.",
-  "heroImage": "/projects/cavern-toolkit/hero.jpg",
+  "heroImage": "/projects/cavern-toolkit/cavern-space.jpg",
   "platform": "A Unity Development Toolkit with an interactive sample scene.",
   "toolsAndTech": ["Maya", "Blender", "ZBrush", "Substance Painter", "Substance Designer", "Unity"],
   "roles": ["Tech Artist", "VFX Artist", "3D Artist", "UI Artist"],
@@ -16,39 +16,39 @@
   "contributions": [
     {
       "title": "Designed and created the sample scene assets and experience",
-      "image": "/projects/cavern-toolkit/contribution-1.jpg"
+      "image": "/projects/cavern-toolkit/cavern-space.jpg"
     },
     {
       "title": "Creating shaders and VFX (stylized grass, water) for sample scenes",
-      "image": "/projects/cavern-toolkit/contribution-2.jpg"
+      "image": "/projects/cavern-toolkit/water.gif"
     },
     {
       "title": "Animated Fur Shader (HLSL)",
-      "image": "/projects/cavern-toolkit/contribution-3.jpg"
+      "image": "/projects/cavern-toolkit/fur.gif"
     },
     {
       "title": "Stylized Water Shader (Shader Graph)",
-      "image": "/projects/cavern-toolkit/contribution-4.jpg"
+      "image": "/projects/cavern-toolkit/water.gif"
     },
     {
       "title": "Wind Simulation (Shader Graph)",
-      "image": "/projects/cavern-toolkit/contribution-5.jpg"
+      "image": "/projects/cavern-toolkit/wind.gif"
     },
     {
       "title": "Hugging VFX (Particle System & VFXGraph, two way)",
-      "image": "/projects/cavern-toolkit/contribution-6.jpg"
+      "image": "/projects/cavern-toolkit/fur.gif"
     },
     {
       "title": "Sparkle VFX (Particle System & VFXGraph, two way)",
-      "image": "/projects/cavern-toolkit/contribution-7.jpg"
+      "image": "/projects/cavern-toolkit/water.gif"
     },
     {
       "title": "Created detailed documentation for artist and developers best practices in CAVERN",
-      "image": "/projects/cavern-toolkit/contribution-8.jpg"
+      "image": "/projects/cavern-toolkit/cavern-space.jpg"
     },
     {
       "title": "Developed UI for Unity editor windows, improving accessibility of toolkit features",
-      "image": "/projects/cavern-toolkit/contribution-9.jpg"
+      "image": "/projects/cavern-toolkit/cavern-space.jpg"
     }
   ],
   "overview": "The CAVERN Toolkit is a collection of software tools, Unity packages, and supporting documents that enables students to create immersive XR experiences even with little to no prior XR background. The CAVERN is a low-cost multiplayer CAVE with a 270° curved screen, 3D stereoscopic projection and a 20-foot diameter play area located at Carnegie Mellon University. These unique qualities of the CAVERN allow for multiple guests to physically explore an XR world together.",
@@ -63,58 +63,58 @@
     "goals": [
           {
             "title": "Arouse Sense of Immersion",
-            "image": "/projects/cavern-toolkit/goal-1.jpg"
+            "image": "/projects/cavern-toolkit/cavern-space.jpg"
           },
           {
             "title": "Stereo & Spatial Sound",
-            "image": "/projects/cavern-toolkit/goal-2.jpg"
+            "image": "/projects/cavern-toolkit/cavern-space.jpg"
           },
           {
             "title": "Animated objects",
-            "image": "/projects/cavern-toolkit/goal-3.jpg"
+            "image": "/projects/cavern-toolkit/cavern-space.jpg"
           },
           {
             "title": "Demo Interactions & Showcase vive trackers features",
-            "image": "/projects/cavern-toolkit/goal-4.jpg"
+            "image": "/projects/cavern-toolkit/cavern-space.jpg"
           },
           {
             "title": "Prefabs with interaction scripts",
-            "image": "/projects/cavern-toolkit/goal-5.jpg"
+            "image": "/projects/cavern-toolkit/cavern-space.jpg"
           },
           {
             "title": "Prove Performance & Tech art features",
-            "image": "/projects/cavern-toolkit/goal-6.jpg"
+            "image": "/projects/cavern-toolkit/cavern-space.jpg"
           }
     ]
   },
   "techArts": [
     {
       "title": "Stylized & Running Water",
-      "image": "/projects/cavern-toolkit/tech-water.jpg"
+      "image": "/projects/cavern-toolkit/water.gif"
     },
     {
       "title": "Wind Simulation",
-      "image": "/projects/cavern-toolkit/tech-wind.jpg"
+      "image": "/projects/cavern-toolkit/wind.gif"
     },
     {
       "title": "Fur Shader & Subsurface Scattering",
-      "image": "/projects/cavern-toolkit/tech-fur.jpg"
+      "image": "/projects/cavern-toolkit/fur_shader.png"
     },
     {
       "title": "VFX & Particle System",
-      "image": "/projects/cavern-toolkit/tech-vfx.jpg"
+      "image": "/projects/cavern-toolkit/water.gif"
     },
     {
       "title": "Fur Shader - HLSL",
-      "image": "/projects/cavern-toolkit/tech-hlsl.jpg"
+      "image": "/projects/cavern-toolkit/fur.gif"
     },
     {
       "title": "Stylized Water - Shader Graph",
-      "image": "/projects/cavern-toolkit/tech-shader-graph.jpg"
+      "image": "/projects/cavern-toolkit/wind-shader.png"
     },
     {
       "title": "Wind - Shader Graph",
-      "image": "/projects/cavern-toolkit/tech-wind-graph.jpg"
+      "image": "/projects/cavern-toolkit/wind.gif"
     }
   ]
 }

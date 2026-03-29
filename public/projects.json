@@ -1,4 +1,20 @@
 [
+{
+    "id": "cassette-jury",
+    "title": "Cassette Jury",
+    "category": "Web & Brand",
+    "tags": [
+      "Three.js",
+      "Web App",
+      "AI",
+      "LLM",
+      "3D",
+      "Creative Tool",
+      "React"
+    ],
+    "intro": "A pocket jury for creative decisions. AI-powered characters deliberate on your creative questions in real-time — for when you need a verdict but don't have the time or budget for a real one.",
+    "url": "https://cassettejury.farm/"
+  },
   {
     "id": "cavern-toolkit",
     "title": "CAVERN Toolkit",

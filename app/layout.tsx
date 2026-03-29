@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, IBM_Plex_Mono, Bayon } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CursorLoader from "@/components/CursorLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ibmPlexMono.variable} ${bayon.variable} antialiased bg-black text-white`}
       >
+        <CursorLoader />
         <Navbar />
         {children}
         <Footer />

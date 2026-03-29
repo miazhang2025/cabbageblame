@@ -1,0 +1,59 @@
+{
+  "id": "urp-painterly-shader",
+  "title": "URP Painterly Shader",
+  "category": "Tools & Technical R&D",
+  "tags": ["Unity", "URP", "HLSL", "Shader Development", "Technical Art"],
+  "intro": "A stylized painterly shader built in Unity URP. Creates a hand-painted art style with organic edges that can dissolve and erode — mimicking traditional art techniques in real-time 3D.",
+  "heroImage": "/projects/urp-painterly-shader.png",
+  "platform": "Unity URP (Universal Render Pipeline)",
+  "toolsAndTech": ["Unity", "URP", "HLSL", "Shader Graph"],
+  "roles": ["Technical Artist", "Shader Developer"],
+  "links": {
+    "github": "https://github.com/miazhang2025/PainterlyShaderURP.git"
+  },
+  "overview": "This shader creates a stylized, hand-painted art style with organic, painterly edges that can dissolve/erode, mimicking traditional art techniques in real-time 3D. It replaces photorealistic rendering with a gradient-based lighting model, adds brush stroke edge detection, and supports dissolve transitions — giving objects the look of a living painting.",
+  "overviewVideo": "https://www.youtube.com/embed/c7jk9y61saw",
+  "developmentIteration": {
+    "title": "MAIN FEATURES",
+    "steps": [
+      {
+        "title": "Stylized Lighting",
+        "items": [
+          "Replaces smooth photorealistic lighting with stepped, gradient-based shading",
+          "Uses artist-controlled gradient textures instead of physically accurate light calculations",
+          "Creates that 'cel-shaded' or 'illustrated' look common in games like Genshin Impact or Borderlands"
+        ]
+      },
+      {
+        "title": "Painterly Edge Effects",
+        "items": [
+          "Fresnel detection finds the silhouette/edges of objects",
+          "Brush stroke textures add hand-painted texture variation",
+          "Triplanar mapping ensures consistent texture appearance from all angles (no UV stretching)",
+          "Gives the impression that edges were painted with actual brush strokes"
+        ]
+      },
+      {
+        "title": "Rim Erosion / Dissolve",
+        "items": [
+          "Combines rim lighting with noise textures to create organic edge breakup",
+          "Edges can fade to transparency in a painterly, artistic way",
+          "Useful for dissolve effects, artistic transitions, or simulating paint wear/aging"
+        ]
+      }
+    ]
+  },
+  "thePlugin": {
+    "title": "PROPERTIES & PARAMETERS",
+    "description": "The shader exposes a full set of artist-friendly properties for tuning the painterly look — from surface texture inputs to fine-grained erosion and brush stroke controls.",
+    "downloadLink": "https://github.com/miazhang2025/PainterlyShaderURP.git",
+    "howToUse": [
+      "Texture Maps: Albedo map, normal map",
+      "Surface properties: Metallic, Smoothness",
+      "Painterly effect: Custom gradient texture for lighting, guide texture for painterly brush effects",
+      "Rim lighting: Color, power, and intensity for edge highlights",
+      "Erosion effect: Scale, threshold, and softness for texture-based edge breakup",
+      "Brush strokes: Parameters for painterly edge effects"
+    ]
+  }
+}

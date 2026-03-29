@@ -1,0 +1,64 @@
+{
+  "id": "house-generator",
+  "title": "House Generator (Houdini Engine, UE5)",
+  "category": "Tools & Technical R&D",
+  "tags": ["Houdini", "Unreal Engine", "PCG", "Procedural Generation", "VEX"],
+  "intro": "Procedural architecture generation — Houdini and Unreal PCG pipeline.",
+  "heroImage": "/projects/house-generator/Screenshot-2025-07-30-114850.png",
+  "platform": "Houdini Engine + Unreal Engine 5",
+  "toolsAndTech": ["Houdini", "Houdini Engine", "Unreal Engine 5", "VEX", "PCG"],
+  "roles": ["Technical Artist", "Tool Developer"],
+  "overview": "A customizable procedural house generator tool using UE5 and Houdini Engine, enabling level designers and artists to create modular architecture with adjustable parameters (e.g., wall height, door/window placement, roof type).\n\nStreamlined asset iteration for game environments by integrating the generator into Unreal Engine, allowing for real-time level editing and parametric control.\n\nDesigned additional asset generators including bottles, plant pots, and clouds to support efficient set dressing.",
+  "overviewVideo": "https://www.youtube.com/embed/iI4Fv7K1F5E",
+  "developmentIteration": {
+    "title": "TECHNICAL BREAKDOWN",
+    "steps": [
+      {
+        "title": "Block-out Mesh Preprocess",
+        "items": [
+          "Ingests a simple block-out mesh as the base footprint",
+          "Extracts floor plan geometry and computes structural bounding volumes",
+          "Prepares edge loops and face groups for downstream wall and roof processing"
+        ],
+        "image": "/projects/house-generator/Screenshot-2025-08-02-220126.png"
+      },
+      {
+        "title": "Roof Process (Shape, UV, Refinement)",
+        "items": [
+          "Generates multiple roof typologies (gabled, hipped, flat) from the block-out top",
+          "Automates UV unwrapping for roof tiles and trim pieces",
+          "Applies geometry refinement and ridge/eave detailing passes"
+        ],
+        "image": "/projects/house-generator/Screenshot-2025-08-02-220208.png"
+      },
+      {
+        "title": "Wall Process (Window, Beams, Floors)",
+        "items": [
+          "Distributes doors and windows along wall spans based on parametric spacing rules",
+          "Generates floor-by-floor beam and trim geometry procedurally",
+          "Supports multi-storey facades with per-floor material variation"
+        ],
+        "image": "/projects/house-generator/Screenshot-2025-08-02-220256.png"
+      },
+      {
+        "title": "Unreal In-Editor Settings",
+        "items": [
+          "Exposed as a Houdini Engine HDA inside UE5 for real-time parametric control",
+          "Level designers adjust wall height, floor count, roof type, and window density directly in the editor",
+          "Outputs static mesh instances compatible with UE5 Nanite and Lumen pipelines"
+        ],
+        "image": "/projects/house-generator/Screenshot-2025-08-02-220343.png"
+      }
+    ]
+  },
+  "galleryImages": [
+    "/projects/house-generator/Screenshot-2025-08-02-220753.png",
+    "/projects/house-generator/Screenshot-2025-07-30-115125.png",
+    "/projects/house-generator/01.gif"
+  ],
+  "otherHDAs": [
+    { "title": "CLOUD", "image": "/projects/house-generator/cloud.gif" },
+    { "title": "PLANT POT", "image": "/projects/house-generator/pot.gif" },
+    { "title": "BOTTLE", "image": "/projects/house-generator/Screenshot-2025-08-02-220753.png" }
+  ]
+}

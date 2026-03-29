@@ -1,46 +1,71 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Draggable } from 'gsap/dist/Draggable';
 import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
-gsap.registerPlugin(ScrambleTextPlugin, Draggable);
+gsap.registerPlugin(Draggable, ScrollTrigger);
+
+const experience = [
+  {
+    company: 'Visual Endeavors',
+    role: 'Creative Engineer',
+    period: '2023 – Present',
+    description: 'Live entertainment & virtual production — Sphere, concerts, and virtual production pipelines. Built real-time tools and systems for large-scale immersive shows.',
+  },
+  {
+    company: 'COSM',
+    role: 'Technical Ops — Immersive Camera Systems',
+    period: '2022 – 2023',
+    description: 'Operated and maintained immersive camera capture systems for dome and spatial media environments.',
+  },
+  {
+    company: 'Landor & Fitch, WPP',
+    role: 'Creative Development',
+    period: '2021 – 2022',
+    description: 'Branding and creative development for global clients, bridging design and interactive production.',
+  },
+  {
+    company: 'Poly Art',
+    role: 'Creative Director',
+    period: '2019 – 2021',
+    description: 'Led creative direction for architectural LED installations — concept through delivery.',
+  },
+];
+
+const skillCategories = [
+  {
+    label: 'Real-Time',
+    skills: ['Unreal Engine', 'Unity', 'TouchDesigner', 'Notch', 'Disguise'],
+  },
+  {
+    label: '3D & FX',
+    skills: ['Houdini', 'Blender', 'Maya', 'Cinema 4D', 'Substance', 'ZBrush'],
+  },
+  {
+    label: 'Code',
+    skills: ['C++', 'C#', 'Python', 'VEX', 'HLSL/GLSL', 'JS/TS', 'React'],
+  },
+  {
+    label: 'Post & Design',
+    skills: ['After Effects', 'Premiere', 'Photoshop', 'Figma'],
+  },
+  {
+    label: 'Version Control',
+    skills: ['Git', 'Perforce'],
+  },
+];
 
 export default function About() {
   const sectionRef = useFadeInOnScroll({ duration: 0.8, delay: 0.2, staggerDelay: 0.1 });
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const experienceRef = useRef<HTMLDivElement>(null);
-  const skillsRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const expRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const [hoveredJob, setHoveredJob] = useState<string | null>(null);
 
-  // Setup text scramble animations on hover
-  useEffect(() => {
-    const setupScramble = (element: HTMLElement | null) => {
-      if (!element) return;
-
-      const originalText = element.innerText;
-
-      element.addEventListener('mouseenter', () => {
-        gsap.to(element, {
-          scrambleText: {
-            text: originalText,
-            speed: 0.8,
-            chars: '$s@#!?',
-            revealDelay: 0.1,
-          },
-          duration: 0.5,
-        });
-      });
-    };
-
-    setupScramble(aboutRef.current);
-    setupScramble(experienceRef.current);
-    setupScramble(skillsRef.current);
-  }, []);
-
-  // Setup draggable images
+  // Setup draggable images + scroll animations
   useEffect(() => {
     const images = containerRef.current?.querySelectorAll('.draggable-image');
     if (images) {
@@ -53,61 +78,65 @@ export default function About() {
         });
       });
     }
+
+    // Experience rows: stagger slide-in from left
+    const expRows = expRef.current?.querySelectorAll('[data-exp-row]');
+    if (expRows && expRows.length > 0) {
+      gsap.fromTo(
+        expRows,
+        { x: -40, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.12,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: expRef.current,
+            start: 'top 82%',
+          },
+          onComplete: () => { gsap.set(expRows, { clearProps: 'all' }); },
+        }
+      );
+    }
+
+    // Skills pills: stagger scale+fade in
+    const pills = skillsRef.current?.querySelectorAll('[data-skill-pill]');
+    if (pills && pills.length > 0) {
+      gsap.fromTo(
+        pills,
+        { scale: 0.7, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.35,
+          stagger: 0.04,
+          ease: 'back.out(1.7)',
+          scrollTrigger: {
+            trigger: skillsRef.current,
+            start: 'top 85%',
+          },
+          onComplete: () => { gsap.set(pills, { clearProps: 'all' }); },
+        }
+      );
+    }
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="relative w-full min-h-screen py-24 px-6" style={{ backgroundColor: '#0000FF' }}>
-      <div className="max-w-6xl mx-auto">
+    <section ref={sectionRef} id="about" className="relative w-full min-h-screen py-24 px-6">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <h2 className="text-5xl md:text-7xl font-bold mb-2 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>I AM A</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Side - Text Sections with Scramble Animations */}
-          <div className="space-y-12">
+          {/* Left Side - Bio */}
+          <div>
             {/* About */}
             <div data-fade-in>
               <div
-                ref={aboutRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap"
+                className="leading-relaxed text-sm whitespace-pre-wrap"
                 style={{ color: '#FFFFFF' }}
               >
-                {`Technical Artist & Creative Engineer, focused on immersive experiences and virtual production. I build tools, pipelines, and real-time systems — procedural generation, AI workflows, VFX, shading, XR/LED/projection installs. 
-                The short version: I write code to solve art problems. The longer version involves a lot of game engines, late nights, and questions like "what if we just tried—" 
-                I work across different tools and media intentionally. The most interesting creative problems tend to live at the edges of disciplines, and I like being useful at those edges.
-                I also make stuff purely for fun — moving images, small web experiments, creative coding projects that don't need to exist but do anyway. That lives at Cabbage Farm.`}
-              </div>
-            </div>
-
-            {/* Experience */}
-            <div data-fade-in>
-              <h3 className="text-lg mb-2 tracking-wide" style={{ color: '#FFFFFF' }}>I worked at</h3>
-              <div
-                ref={experienceRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap "
-                style={{ color: '#FFFFFF' }}
-              >
-                {`Visual Endeavors - Creative Engineering — Live Entertainment & Virtual Production (Sphere, concerts, virtual production)
-COSM
-Technical Ops — Immersive Camera Systems
-Landor & Fitch, WPP
-Creative Development — Branding
-Poly Art
-Creative Direction — Architectural LED`}
-              </div>
-            </div>
-
-            {/* Skills */}
-            <div data-fade-in>
-              <h3 className="text-lg mb-2 tracking-wide" style={{ color: '#FFFFFF' }}>I can do</h3>
-              <div
-                ref={skillsRef}
-                className="leading-relaxed text-sm md:text-base whitespace-pre-wrap "
-                style={{ color: '#FFFFFF' }}
-              >
-                {`Real-Time: Unreal, Unity, TouchDesigner, Notch, Disguise
-3D & FX: Houdini, Blender, Maya, Cinema 4D, Substance, ZBrush
-Code: C++, C#, Python, VEX, HLSL/GLSL, JS/TS, React
-Post & Design: After Effects, Premiere, Photoshop, Figma
-Version Control: Git, Perforce`}
+                {`Technical Artist & Creative Engineer who lives in the gap between code and craft.\n\nI build tools, pipelines, and real-time systems — procedural generation, AI workflows, VFX, shading, XR/LED/projection installs. But the real job is translating between disciplines: taking something broken or unfinished or technically weird and finding the creative possibility inside it. Glitches are just unexplored aesthetics.\n\nI work across tools and media on purpose. The most interesting problems don't belong to any single discipline, and I've always been more useful at the edges than the center. Whether that's writing a shader, wiring an AI pipeline, or just asking "what if we just tried—" — I'd rather figure out what a tool can't do yet than stay inside what it already can. The ideas come fast. What I care about is closing the gap between the idea and the thing you can actually hold.\n\nI also make stuff that doesn't need to exist — moving images, web experiments, creative coding projects born out of curiosity.`}
               </div>
             </div>
           </div>
@@ -224,6 +253,76 @@ Version Control: Git, Perforce`}
             <p className='opacity-50 text-center'>drag me crazy :)</p>
           </div>
         </div>
+
+        {/* Experience */}
+        <div className="mt-20" ref={expRef} data-fade-in>
+          <h3 className="text-lg mb-6 tracking-wide" style={{ color: '#FFFFFF' }}>I worked at</h3>
+          <div className="divide-y" style={{ borderColor: 'rgba(255,255,255,0.2)' }}>
+            {experience.map((job) => (
+              <div
+                key={job.company}
+                data-exp-row
+                onMouseEnter={() => setHoveredJob(job.company)}
+                onMouseLeave={() => setHoveredJob(null)}
+                className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 py-6 cursor-default"
+                style={{
+                  transition: 'opacity 0.3s ease',
+                  opacity: hoveredJob !== null && hoveredJob !== job.company ? 0.3 : 1,
+                }}
+              >
+                <div className="md:col-span-1">
+                  <p className="font-semibold text-sm tracking-wide" style={{ color: '#FFFFFF' }}>{job.company}</p>
+                  <p className="text-xs mt-0.5 opacity-70" style={{ color: '#FFFFFF' }}>{job.role}</p>
+                  <p className="text-xs mt-1 opacity-50" style={{ color: '#FFFFFF' }}>{job.period}</p>
+                </div>
+                <div className="md:col-span-2">
+                  <p className="text-sm leading-relaxed opacity-80" style={{ color: '#FFFFFF' }}>{job.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Skills */}
+        <div className="mt-16" ref={skillsRef} data-fade-in>
+          <h3 className="text-lg mb-6 tracking-wide" style={{ color: '#FFFFFF' }}>I can do</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {skillCategories.map((cat) => (
+              <div key={cat.label}>
+                <p className="text-xs uppercase tracking-widest mb-3 opacity-50" style={{ color: '#FFFFFF' }}>{cat.label}</p>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      data-skill-pill
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#FFFFFF';
+                        e.currentTarget.style.color = '#0000FF';
+                        e.currentTarget.style.borderColor = '#FFFFFF';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#FFFFFF';
+                        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)';
+                      }}
+                      className="text-xs px-3 py-1 rounded-full"
+                      style={{
+                        border: '1px solid rgba(255,255,255,0.5)',
+                        color: '#FFFFFF',
+                        backgroundColor: 'transparent',
+                        transition: 'background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease',
+                        cursor: 'default',
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

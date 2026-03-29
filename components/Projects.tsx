@@ -68,8 +68,8 @@ export default function Projects() {
   }, [filteredProjects.length]);
 
   return (
-    <section ref={sectionRef} id="projects" className="relative w-full py-24" style={{ backgroundColor: '#BABBCA' }}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section ref={sectionRef} id="projects" className="relative w-full py-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <h2 className="text-5xl md:text-6xl font-bold mb-12 tracking-wide" style={{ color: '#FFFFFF' }} data-fade-in>MY PROJECTS</h2>
 
         {/* Filter Buttons */}
@@ -81,11 +81,11 @@ export default function Projects() {
               className="text-sm tracking-wide px-1 transition duration-500"
               style={{
                 color: activeCategory === category.id ? '#BABBCA' : '#FFFFFF',
-                backgroundColor: activeCategory === category.id ? '#0000FF' : 'transparent',
+                backgroundColor: activeCategory === category.id ? '#0000ff' : 'transparent',
               }}
               onMouseEnter={(e) => {
                 if (activeCategory !== category.id) {
-                  e.currentTarget.style.backgroundColor = '#0000FF';
+                  e.currentTarget.style.backgroundColor = '#0000ff';
                   e.currentTarget.style.color = '#BABBCA';
                 }
               }}
@@ -144,7 +144,7 @@ export default function Projects() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold mb-4 leading-tight group-hover:text-blue-400 transition" style={{ color: '#0000FF' }}>
+                    <h3 className="text-xl font-bold mb-4 leading-tight group-hover:text-blue-400 transition" style={{ color: '#ffffff' }}>
                       {project.title}
                     </h3>
                   </div>
