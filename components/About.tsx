@@ -12,25 +12,25 @@ const experience = [
   {
     company: 'Visual Endeavors',
     role: 'Creative Engineer',
-    period: '2023 – Present',
+    period: '2026.1 – Present',
     description: 'Live entertainment & virtual production — Sphere, concerts, and virtual production pipelines. Built real-time tools and systems for large-scale immersive shows.',
   },
   {
     company: 'COSM',
     role: 'Technical Ops — Immersive Camera Systems',
-    period: '2022 – 2023',
+    period: '2025',
     description: 'Operated and maintained immersive camera capture systems for dome and spatial media environments.',
   },
   {
     company: 'Landor & Fitch, WPP',
     role: 'Creative Development',
-    period: '2021 – 2022',
+    period: '2023',
     description: 'Branding and creative development for global clients, bridging design and interactive production.',
   },
   {
     company: 'Poly Art',
     role: 'Creative Director',
-    period: '2019 – 2021',
+    period: '2021',
     description: 'Led creative direction for architectural LED installations — concept through delivery.',
   },
 ];
@@ -50,7 +50,7 @@ const skillCategories = [
   },
   {
     label: 'Post & Design',
-    skills: ['After Effects', 'Premiere', 'Photoshop', 'Figma'],
+    skills: ['After Effects', 'Premiere', 'Photoshop', 'Figma', 'ComfyUI'],
   },
   {
     label: 'Version Control',
