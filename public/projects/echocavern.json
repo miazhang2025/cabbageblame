@@ -5,7 +5,7 @@
   "tags": ["Unity", "AI", "Voice Recognition", "Real-Time 3D", "Immersive", "R&D"],
   "intro": "Personal R&D — an AI-driven voice-to-3D experience built for immersive projection space. Still evolving.",
   "overview": "EchoCavern is a Demo of an immersive experience to integrate AI generated 3D assets into the Unity immersive experience development pipeline. It is a demo (and a tool) for exploration of potential real time 3D models to the CAVERN (Unity) development pipeline. Even though this tool only has a basic working demo of the asset generating and importing pipeline, it showcases the potential of integrating AI generation and CAVERN immersive experiences.",
-  "overviewVideo": "https://www.youtube.com/embed/placeholder",
+  "overviewVideo": "https://www.youtube.com/embed/7LomIDTdKdY",
   "goal": {
     "title": "Goal",
     "description": "The objective of the independent study will look at the pipeline of importing AI generated 3D content into an active Unity Environment running on the Cavern Setup. While we already know that AI Generated models and meshes can be imported into Unity (and thus the Cavern Toolkit setup) this exploration looks at ways in which a user (or designer) can import AI generated content in close to real time as the unity environment is running."

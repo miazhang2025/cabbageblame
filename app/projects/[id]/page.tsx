@@ -312,6 +312,18 @@ export default async function ProjectDetail({
                 </div>
               )}
 
+              <div className="w-full aspect-video rounded-lg overflow-hidden mb-8">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/2T4cV6it7QI"
+                  title="The Plugin Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
               {/* How To Use */}
               {project.thePlugin.howToUse && (
                 <div>
@@ -371,19 +383,13 @@ export default async function ProjectDetail({
           {project.contributions && project.contributions.length > 0 && (
             <div className="mb-24">
               <h2 className="text-4xl font-bold mb-8 tracking-wide" style={{ color: '#FFFFFF' }}>MY CONTRIBUTIONS</h2>
-              <div className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.contributions.map((contribution, index) => (
-                  <div key={index} className="flex gap-8 items-start">
-                    <div className="flex-1">
-                      <p style={{ color: '#CCCCCC' }} className="text-base leading-relaxed">
-                        {contribution.title}
-                      </p>
-                    </div>
-                    {contribution.image && (
-                      <div className="relative w-64 h-48 flex-shrink-0 rounded-lg overflow-hidden">
-                        <Image src={contribution.image} alt={contribution.title} fill className="object-cover" />
-                      </div>
-                    )}
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="mt-1 text-blue-400 flex-shrink-0">•</span>
+                    <p style={{ color: '#CCCCCC' }} className="text-base leading-relaxed">
+                      {contribution.title}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -412,6 +418,18 @@ export default async function ProjectDetail({
                 {project.sampleScene?.description}
               </p>
 
+              <div className="w-full aspect-video rounded-lg overflow-hidden mb-12">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/bsXI2TTjZTI"
+                  title="Sample Scene Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
               {/* Sample Scene Goals */}
               {project.sampleScene?.goals && project.sampleScene.goals.length > 0 && (
                 <div className="mt-12">
@@ -419,14 +437,9 @@ export default async function ProjectDetail({
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {project.sampleScene.goals.map((goal, index) => (
                       <div key={index} className="border border-gray-700 p-6 rounded-lg">
-                        <p style={{ color: '#CCCCCC' }} className="text-base font-semibold mb-4">
+                        <p style={{ color: '#CCCCCC' }} className="text-base font-semibold">
                           {goal.title}
                         </p>
-                        {goal.image && (
-                          <div className="w-full h-32 bg-gray-800 rounded flex items-center justify-center">
-                            <p style={{ color: '#888' }} className="text-sm">[Image]</p>
-                          </div>
-                        )}
                       </div>
                     ))}
                   </div>
@@ -439,12 +452,29 @@ export default async function ProjectDetail({
           {project.techArts && project.techArts.length > 0 && (
             <div className="mb-24">
               <h2 className="text-4xl font-bold mb-8 tracking-wide" style={{ color: '#FFFFFF' }}>TECH ARTS & ASSETS</h2>
+              <div className="w-full aspect-video rounded-lg overflow-hidden mb-8">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/TMuLLRVoufs"
+                  title="Tech Arts & Assets Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {project.techArts.map((asset, index) => (
                   <div key={index} className="flex flex-col">
-                    <div className="aspect-video bg-gray-800 rounded-lg border border-gray-700 flex items-center justify-center mb-4">
-                      <p style={{ color: '#888' }} className="text-sm text-center px-4">[{asset.title}]</p>
-                    </div>
+                    {asset.image ? (
+                      <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
+                        <Image src={asset.image} alt={asset.title} fill className="object-cover" />
+                      </div>
+                    ) : (
+                      <div className="aspect-video bg-gray-800 rounded-lg border border-gray-700 flex items-center justify-center mb-4">
+                        <p style={{ color: '#888' }} className="text-sm text-center px-4">[{asset.title}]</p>
+                      </div>
+                    )}
                     <p style={{ color: '#CCCCCC' }} className="text-sm tracking-wide">
                       {asset.title}
                     </p>
