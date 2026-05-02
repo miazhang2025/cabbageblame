@@ -15,6 +15,21 @@
     "intro": "A pocket jury for creative decisions. AI-powered characters deliberate on your creative questions in real-time — for when you need a verdict but don't have the time or budget for a real one.",
     "url": "https://cassettejury.farm/"
   },
+    {
+    "id": "nightingale",
+    "title": "Nightingale",
+    "category": "Immersive & Real-Time Systems",
+    "tags": ["TouchDesigner", "Live Entertainment", "Concert Visuals", "Real-Time"],
+    "intro": "Concert visuals for No Doubt Tour 2026.",
+    "url": "https://www.nodoubt.com/sphere/"
+  },
+    {
+    "id": "santa-beer",
+    "title": "Santa Beer",
+    "category": "Moving Image & Film",
+    "tags": ["AIGC", "Video", "AI"],
+    "intro": "A beer advertisement made entirely with AI-generated content. Festive and slightly unhinged."
+  },
   {
     "id": "cavern-toolkit",
     "title": "CAVERN Toolkit",
@@ -43,14 +58,7 @@
     "tags": ["Immersive", "Animation", "Projection Mapping", "Realtime"],
     "intro": "Immersive animation screened on a 270° projection wall."
   },
-  {
-    "id": "nightingale",
-    "title": "Nightingale",
-    "category": "Immersive & Real-Time Systems",
-    "tags": ["TouchDesigner", "Live Entertainment", "Concert Visuals", "Real-Time"],
-    "intro": "Concert visuals for No Doubt.",
-    "url": "https://www.nodoubt.com/sphere/"
-  },
+
   {
     "id": "zach-become-human",
     "title": "Zach Become Human",
@@ -102,19 +110,12 @@
     "intro": "A growing collection of tools built while experimenting with AI inside DCC pipelines."
   },
   {
-    "id": "scotty-3d",
-    "title": "Scotty 3D",
-    "category": "Tools & Technical R&D",
-    "tags": ["C++", "Computer Graphics", "Rendering", "Mesh Processing"],
-    "intro": "CMU Computer Graphics course final. Here to prove I know what a vertex is."
-  },
-  {
     "id": "codesmith-federal",
-    "title": "Codesmith / Federal",
+    "title": "Codesmith Rebrand",
     "category": "Web & Brand",
     "tags": ["Figma", "React", "TypeScript", "Brand Design", "Frontend"],
     "intro": "Brand identity and landing page for a $100M+ federal education initiative.",
-    "url": "https://www.codesmith.io/federal"
+    "url": "https://www.codesmith.io"
   },
   {
     "id": "mia-au-chocolat",
@@ -131,28 +132,6 @@
     "tags": ["HTML/CSS", "Creative Coding", "Frontend"],
     "intro": "A website for a vodka brand that doesn't exist. Stupid and great.",
     "url": "https://jessy.wtf/"
-  },
-  {
-    "id": "clementine",
-    "title": "Clementine",
-    "category": "Web & Brand",
-    "tags": ["Python", "AI", "LLM", "Personal Project"],
-    "intro": "My personal AI assistant. She lives here now.",
-    "url": "https://mia-clementine.vercel.app/"
-  },
-  {
-    "id": "the-dive",
-    "title": "The Dive",
-    "category": "Moving Image & Film",
-    "tags": ["Animation", "2D/3D", "Character"],
-    "intro": "Animation. A girl becomes an axolotl. It makes sense when you watch it."
-  },
-  {
-    "id": "santa-beer",
-    "title": "Santa Beer",
-    "category": "Moving Image & Film",
-    "tags": ["AIGC", "Video", "AI"],
-    "intro": "A beer advertisement made entirely with AI-generated content. Festive and slightly unhinged."
   },
   {
     "id": "by-the-ruins",

@@ -29,8 +29,8 @@ const experience = [
   },
   {
     company: 'Poly Art',
-    role: 'Creative Director',
-    period: '2021',
+    role: 'Assistant Creative Director',
+    period: '2022',
     description: 'Led creative direction for architectural LED installations — concept through delivery.',
   },
 ];
