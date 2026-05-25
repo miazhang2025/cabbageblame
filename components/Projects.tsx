@@ -81,13 +81,13 @@ export default function Projects() {
               onClick={() => handleCategoryClick(category.id)}
               className="text-sm tracking-wide px-1 transition duration-500"
               style={{
-                color: activeCategory === category.id ? '#BABBCA' : '#FFFFFF',
+                color: activeCategory === category.id ? '#676a88' : '#FFFFFF',
                 backgroundColor: activeCategory === category.id ? '#0000ff' : 'transparent',
               }}
               onMouseEnter={(e) => {
                 if (activeCategory !== category.id) {
                   e.currentTarget.style.backgroundColor = '#0000ff';
-                  e.currentTarget.style.color = '#BABBCA';
+                  e.currentTarget.style.color = '#676a88';
                 }
               }}
               onMouseLeave={(e) => {
