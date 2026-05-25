@@ -1,8 +1,30 @@
 [
 {
+    "id": "folio",
+    "title": "Folio",
+    "categories": ["Web & Brand", "AI Creatives"],
+    "tags": ["AI", "LLM", "Data Visualization", "Web App", "Creative Tool"],
+    "intro": "A thought map for your Claude conversations — visualises the shape of your thinking and generates a personalised weekly digest of what your mind's been chasing.",
+    "url": "https://folio-taupe.vercel.app/"
+  },
+  {
+    "id": "flaneur",
+    "title": "Flaneur",
+    "categories": ["Web & Brand"],
+    "tags": ["Location-Based", "Music", "Mobile", "Creative App", "WIP"],
+    "intro": "A location-based music app. The city writes its poems in music. (WIP)"
+  },
+  {
+    "id": "signal",
+    "title": "Signal",
+    "categories": ["Web & Brand", "AI Creatives"],
+    "tags": ["AI", "LLM", "Personalization", "Curation", "WIP"],
+    "intro": "Your intelligence. Curated daily. AI-powered personalised recommendations — built for the way one specific brain works. (WIP)"
+  },
+  {
     "id": "cassette-jury",
     "title": "Cassette Jury",
-    "category": "Web & Brand",
+    "categories": ["Web & Brand", "AI Creatives"],
     "tags": [
       "Three.js",
       "Web App",
@@ -18,7 +40,7 @@
     {
     "id": "nightingale",
     "title": "Nightingale",
-    "category": "Immersive & Real-Time Systems",
+    "categories": ["Immersive & Real-Time Systems"],
     "tags": ["TouchDesigner", "Live Entertainment", "Concert Visuals", "Real-Time"],
     "intro": "Concert visuals for No Doubt Tour 2026.",
     "url": "https://www.nodoubt.com/sphere/"
@@ -26,35 +48,36 @@
     {
     "id": "santa-beer",
     "title": "Santa Beer",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film", "AI Creatives"],
     "tags": ["AIGC", "Video", "AI"],
-    "intro": "A beer advertisement made entirely with AI-generated content. Festive and slightly unhinged."
+    "intro": "A beer advertisement made entirely with AI-generated content. Festive and slightly unhinged.",
+    "url":"https://miazhang2025.github.io/santabeer/"
   },
   {
     "id": "cavern-toolkit",
     "title": "CAVERN Toolkit",
-    "category": "Immersive & Real-Time Systems",
+    "categories": ["Immersive & Real-Time Systems"],
     "tags": ["Unity", "C#", "SDK Development", "Projection Mapping", "Immersive"],
     "intro": "A Unity SDK for 270° immersive projection environments. Built to make the weird spatial stuff easier to build on top of."
   },
   {
     "id": "echocavern",
     "title": "EchoCAVERN",
-    "category": "Immersive & Real-Time Systems",
+    "categories": ["Immersive & Real-Time Systems", "AI Creatives"],
     "tags": ["Unity", "AI", "Voice Recognition", "Real-Time 3D", "Immersive", "R&D"],
     "intro": "Personal R&D — an AI-driven voice-to-3D experience built for immersive projection space. Still evolving."
   },
   {
     "id": "burrata-virtual-production",
     "title": "Burrata Virtual Production",
-    "category": "Immersive & Real-Time Systems",
+    "categories": ["Immersive & Real-Time Systems"],
     "tags": ["Unreal Engine", "Virtual Production", "Pipeline", "LED Volume"],
     "intro": "Pipeline setup and sample project for the first virtual production studio at CMU ETC."
   },
   {
     "id": "monsters-memoir",
     "title": "Monster's Memoir",
-    "category": "Immersive & Real-Time Systems",
+    "categories": ["Immersive & Real-Time Systems"],
     "tags": ["Immersive", "Animation", "Projection Mapping", "Realtime"],
     "intro": "Immersive animation screened on a 270° projection wall."
   },
@@ -62,14 +85,14 @@
   {
     "id": "zach-become-human",
     "title": "Zach Become Human",
-    "category": "Games & Interactive",
+    "categories": ["Games & Interactive"],
     "tags": ["Unity", "Game Design", "C#", "Interactive"],
     "intro": "A game about Mark Zuckerberg trying to be a person. Almost showed it to him. So close."
   },
   {
     "id": "toledo-park-quest",
     "title": "Toledo Park Quest",
-    "category": "Games & Interactive",
+    "categories": ["Games & Interactive"],
     "tags": ["Unity", "Game Design", "Education", "Community"],
     "intro": "Educational game built for local youth in partnership with the City of Toledo.",
     "url":"https://store.steampowered.com/app/4086070/Toledo_Park_Quest/"
@@ -77,42 +100,42 @@
   {
     "id": "volunteer-peeping-contract",
     "title": "Volunteer Peeping Contract",
-    "category": "Games & Interactive",
+    "categories": ["Games & Interactive"],
     "tags": ["Installation", "Interactive", "Concept-Driven"],
     "intro": "An installation that pokes at privacy, surveillance, and what we agree to without reading."
   },
   {
     "id": "house-generator",
     "title": "House Generator",
-    "category": "Tools & Technical R&D",
+    "categories": ["Tools & Technical R&D"],
     "tags": ["Houdini", "Unreal Engine", "PCG", "Procedural Generation", "VEX"],
     "intro": "Procedural architecture generation — Houdini and Unreal PCG pipeline."
   },
   {
     "id": "urp-painterly-shader",
     "title": "URP Painterly Shader",
-    "category": "Tools & Technical R&D",
+    "categories": ["Tools & Technical R&D"],
     "tags": ["Unity", "URP", "HLSL", "Shader Development", "Technical Art"],
     "intro": "A stylized painterly shader built in Unity URP."
   },
   {
     "id": "flesh-and-motion",
     "title": "Flesh & Motion",
-    "category": "Tools & Technical R&D",
+    "categories": ["Tools & Technical R&D"],
     "tags": ["Houdini", "VEX", "FX", "Procedural Animation", "R&D"],
     "intro": "Personal R&D in Houdini — procedural animation and FX with a distinctly gory, visceral aesthetic. Organs. Fluids. The good stuff."
   },
   {
     "id": "ai-dcc-bridge",
     "title": "AI DCC Bridge",
-    "category": "Tools & Technical R&D",
+    "categories": ["Tools & Technical R&D", "AI Creatives"],
     "tags": ["Python", "AI", "Houdini", "Tools Development", "R&D"],
     "intro": "A growing collection of tools built while experimenting with AI inside DCC pipelines."
   },
   {
     "id": "codesmith-federal",
     "title": "Codesmith Rebrand",
-    "category": "Web & Brand",
+    "categories": ["Web & Brand"],
     "tags": ["Figma", "React", "TypeScript", "Brand Design", "Frontend"],
     "intro": "Brand identity and landing page for a $100M+ federal education initiative.",
     "url": "https://www.codesmith.io"
@@ -120,7 +143,7 @@
   {
     "id": "mia-au-chocolat",
     "title": "MIA au Chocolat",
-    "category": "Web & Brand",
+    "categories": ["Web & Brand"],
     "tags": ["Three.js", "WebGL", "Creative Coding", "Frontend"],
     "intro": "3D web experience for my fictional virtual bakery. Delicious and unnecessary.",
     "url": "https://mia-au-chocolat.digital/"
@@ -128,7 +151,7 @@
   {
     "id": "jessy-vodka",
     "title": "Jessy Vodka",
-    "category": "Web & Brand",
+    "categories": ["Web & Brand"],
     "tags": ["HTML/CSS", "Creative Coding", "Frontend"],
     "intro": "A website for a vodka brand that doesn't exist. Stupid and great.",
     "url": "https://jessy.wtf/"
@@ -136,7 +159,7 @@
   {
     "id": "by-the-ruins",
     "title": "By the Ruins",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Documentary", "Film", "Directing"],
     "intro": "Documentary about outsider artists in 00s Beijing.",
     "url": "https://vimeo.com/682321193?fl=pl&fe=sh"
@@ -144,7 +167,7 @@
   {
     "id": "all-that-is-solid-melts-into-air",
     "title": "All That Is Solid Melts Into Air",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Video Essay", "Motion Graphics", "Concept-Driven"],
     "intro": "A sarcastic video response to Chinese government lockdown regulations. Named after Marx. Obviously.",
     "url": "https://vimeo.com/770053303?fl=pl&fe=ti"
@@ -152,7 +175,7 @@
   {
     "id": "my-life-is-a-pathetic-mumblecore-film",
     "title": "My Life Is A Pathetic Mumblecore Film",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Film", "Self-Portrait", "Video"],
     "intro": "Self-portrait video. The title says everything.",
     "url":"https://vimeo.com/897940559?fl=pl&fe=ti"
@@ -160,7 +183,7 @@
   {
     "id": "j-of-theseus",
     "title": "J of Theseus",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Film", "Narrative", "Sci-Fi"],
     "intro": "A humanoid searches for the perfect organs to become real. Currently looking for a heart.",
     "url": "https://vimeo.com/777905236?fl=pl&fe=ti"
@@ -168,7 +191,7 @@
   {
     "id": "silent-night",
     "title": "Silent Night",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Stop Motion", "Animation", "Film"],
     "intro": "Stop-motion animation about a quiet moment in WWI, recreated with chess pieces.",
     "url": "https://vimeo.com/642034433?fl=pl&fe=ti"
@@ -176,7 +199,7 @@
   {
     "id": "monday-morning",
     "title": "Monday Morning",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Collage", "Animation", "Motion"],
     "intro": "Collage animation. Exactly what it sounds like.",
     "url": "https://vimeo.com/656677870?fl=pl&fe=ti"
@@ -184,7 +207,7 @@
   {
     "id": "twin-peaks-intro",
     "title": "Twin Peaks Intro",
-    "category": "Moving Image & Film",
+    "categories": ["Moving Image & Film"],
     "tags": ["Animation", "Motion Design", "Fan Work"],
     "intro": "Tarot card animation reimagining the Twin Peaks intro sequence.",
     "url": "https://vimeo.com/642034606?fl=pl&fe=ti"

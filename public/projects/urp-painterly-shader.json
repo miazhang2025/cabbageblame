@@ -1,7 +1,7 @@
 {
   "id": "urp-painterly-shader",
   "title": "URP Painterly Shader",
-  "category": "Tools & Technical R&D",
+  "categories": ["Tools & Technical R&D"],
   "tags": ["Unity", "URP", "HLSL", "Shader Development", "Technical Art"],
   "intro": "A stylized painterly shader built in Unity URP. Creates a hand-painted art style with organic edges that can dissolve and erode — mimicking traditional art techniques in real-time 3D.",
   "heroImage": "/projects/urp-painterly-shader.png",

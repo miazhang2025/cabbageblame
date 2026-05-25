@@ -1,7 +1,7 @@
 {
   "id": "house-generator",
   "title": "House Generator (Houdini Engine, UE5)",
-  "category": "Tools & Technical R&D",
+  "categories": ["Tools & Technical R&D"],
   "tags": ["Houdini", "Unreal Engine", "PCG", "Procedural Generation", "VEX"],
   "intro": "Procedural architecture generation — Houdini and Unreal PCG pipeline.",
   "heroImage": "/projects/house-generator/Screenshot-2025-07-30-114850.png",

@@ -1,7 +1,7 @@
 {
   "id": "cavern-toolkit",
   "title": "CAVERN Toolkit",
-  "category": "Immersive & Real-Time Systems",
+  "categories": ["Immersive & Real-Time Systems"],
   "tags": ["Unity", "C#", "SDK Development", "Projection Mapping", "Immersive"],
   "intro": "A Unity SDK for 270° immersive projection environments. Built to make the weird spatial stuff easier to build on top of.",
   "heroImage": "/projects/cavern-toolkit/cavern-space.jpg",

@@ -6,7 +6,7 @@ import Image from 'next/image';
 interface Project {
   id: string;
   title: string;
-  category: string;
+  categories: string[];
   tags: string[];
   intro: string;
 }
@@ -148,10 +148,12 @@ export default async function ProjectDetail({
               {project.title}
             </h1>
             
-            <div className="flex flex-wrap gap-4 items-center mb-6">
-              <span className="text-sm px-3 py-1 tracking-wide font-semibold" style={{ color: '#0000FF', backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
-                {project.category.toUpperCase()}
-              </span>
+            <div className="flex flex-wrap gap-2 items-center mb-6">
+              {project.categories.map((cat) => (
+                <span key={cat} className="text-sm px-3 py-1 tracking-wide font-semibold" style={{ color: '#0000FF', backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
+                  {cat.toUpperCase()}
+                </span>
+              ))}
             </div>
 
             {/* Platform and Tools if available */}
