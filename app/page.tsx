@@ -9,7 +9,7 @@ export default function Home() {
     <main className="w-full">
       <Hero />
       <div className="relative">
-        <GrainientLoader color1="#abadc4" color2="#2e06cb" color3="#5a42a9" />
+        <GrainientLoader color1="#5860bd" color2="#2f18b3" color3="#482ba8" />
         <About />
         <Projects />
         <Tagline />

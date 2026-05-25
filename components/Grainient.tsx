@@ -87,9 +87,9 @@ void main(){
 }`;
 
 export default function Grainient({
-  color1 = '#666881',
-  color2 = '#2e06cb',
-  color3 = '#5a42a9',
+  color1 = '#303030',
+  color2 = '#3c2794',
+  color3 = '#463386',
   grainAmount = 0.12,
   speed = 0.25,
 }: GrainientProps) {
