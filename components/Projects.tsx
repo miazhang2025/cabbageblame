@@ -11,7 +11,7 @@ gsap.registerPlugin(Flip);
 interface Project {
   id: string;
   title: string;
-  categories: string[];
+  category: string;
   tags: string[];
   intro: string;
   url?: string;
@@ -19,7 +19,6 @@ interface Project {
 
 const categories = [
   { id: 'all', label: 'ALL' },
-  { id: 'AI Creatives', label: 'AI CREATIVES' },
   { id: 'Immersive & Real-Time Systems', label: 'IMMERSIVE & REAL-TIME' },
   { id: 'Games & Interactive', label: 'GAMES & INTERACTIVE' },
   { id: 'Tools & Technical R&D', label: 'TOOLS & R&D' },
@@ -43,7 +42,7 @@ export default function Projects() {
 
   const filteredProjects = activeCategory === 'all'
     ? projects
-    : projects.filter(p => p.categories.includes(activeCategory));
+    : projects.filter(p => p.category === activeCategory);
 
   // Handle category click to capture state and animate
   const handleCategoryClick = (categoryId: string) => {
@@ -81,13 +80,13 @@ export default function Projects() {
               onClick={() => handleCategoryClick(category.id)}
               className="text-sm tracking-wide px-1 transition duration-500"
               style={{
-                color: activeCategory === category.id ? '#676a88' : '#FFFFFF',
+                color: activeCategory === category.id ? '#BABBCA' : '#FFFFFF',
                 backgroundColor: activeCategory === category.id ? '#0000ff' : 'transparent',
               }}
               onMouseEnter={(e) => {
                 if (activeCategory !== category.id) {
                   e.currentTarget.style.backgroundColor = '#0000ff';
-                  e.currentTarget.style.color = '#676a88';
+                  e.currentTarget.style.color = '#BABBCA';
                 }
               }}
               onMouseLeave={(e) => {
@@ -170,17 +169,14 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* Category Badges */}
-                    <div className="flex flex-wrap gap-1">
-                      {project.categories.map((cat) => (
-                        <span
-                          key={cat}
-                          className="text-xs px-2 py-1 tracking-wide font-semibold"
-                          style={{ color: '#0000FF', backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
-                        >
-                          {cat.toUpperCase()}
-                        </span>
-                      ))}
+                    {/* Category Badge */}
+                    <div className="flex items-center">
+                      <span
+                        className="text-xs px-2 py-1 tracking-wide font-semibold"
+                        style={{ color: '#0000FF', backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
+                      >
+                        {project.category.toUpperCase()}
+                      </span>
                     </div>
                   </div>
                 </div>
