@@ -1,26 +1,5 @@
 [
-{
-    "id": "folio",
-    "title": "Folio",
-    "categories": ["Web & Brand", "AI Creatives"],
-    "tags": ["AI", "LLM", "Data Visualization", "Web App", "Creative Tool"],
-    "intro": "A thought map for your Claude conversations — visualises the shape of your thinking and generates a personalised weekly digest of what your mind's been chasing.",
-    "url": "https://folio-taupe.vercel.app/"
-  },
-  {
-    "id": "flaneur",
-    "title": "Flaneur",
-    "categories": ["Web & Brand"],
-    "tags": ["Location-Based", "Music", "Mobile", "Creative App", "WIP"],
-    "intro": "A location-based music app. The city writes its poems in music. (WIP)"
-  },
-  {
-    "id": "signal",
-    "title": "Signal",
-    "categories": ["Web & Brand", "AI Creatives"],
-    "tags": ["AI", "LLM", "Personalization", "Curation", "WIP"],
-    "intro": "Your intelligence. Curated daily. AI-powered personalised recommendations — built for the way one specific brain works. (WIP)"
-  },
+
   {
     "id": "cassette-jury",
     "title": "Cassette Jury",
@@ -211,5 +190,27 @@
     "tags": ["Animation", "Motion Design", "Fan Work"],
     "intro": "Tarot card animation reimagining the Twin Peaks intro sequence.",
     "url": "https://vimeo.com/642034606?fl=pl&fe=ti"
+  },
+  {
+    "id": "folio",
+    "title": "Folio",
+    "categories": ["Web & Brand", "AI Creatives"],
+    "tags": ["AI", "LLM", "Data Visualization", "Web App", "Creative Tool"],
+    "intro": "A thought map for your Claude conversations — visualises the shape of your thinking and generates a personalised weekly digest of what your mind's been chasing.",
+    "url": "https://folio-taupe.vercel.app/"
+  },
+  {
+    "id": "flaneur",
+    "title": "Flaneur",
+    "categories": ["Web & Brand"],
+    "tags": ["Location-Based", "Music", "Mobile", "Creative App", "WIP"],
+    "intro": "A location-based music app. The city writes its poems in music. (WIP)"
+  },
+  {
+    "id": "signal",
+    "title": "Signal",
+    "categories": ["Web & Brand", "AI Creatives"],
+    "tags": ["AI", "LLM", "Personalization", "Curation", "WIP"],
+    "intro": "Your intelligence. Curated daily. AI-powered personalised recommendations — built for the way one specific brain works. (WIP)"
   }
 ]
